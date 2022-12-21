@@ -1,15 +1,16 @@
-body{
-    margin:0%;
-    padding:0%;
+body {
+    margin: 0%;
+    padding: 0%;
     background-color: black;
 }
-.container{
+
+.container {
     font-family: Arial, Helvetica, sans-serif;
     color: red;
     font-weight: bold;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform:translate(-50%,-50%);
-    font-size:70px;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
 }

@@ -1,14 +1,5 @@
-var  timer;
-var ele= document.getElementById('timer');
+const selectMenu =document.querySelectorAll("select");
 
-(function(){
-    var sec =0;
-    timer=setInterval(()=>{
-        ele.innerHTML = '00:'+ sec;
-        sec++;
-    })
-})
-
-function pause(){
-    clearInterval(timer);
-} 
+for (let i=12;i>0;i++){
+console.log(i)
+}
