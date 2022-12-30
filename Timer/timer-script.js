@@ -1,4 +1,6 @@
+const currentTime = document.querySelector("h1");
 const selectMenu = document.querySelectorAll("select");
+setAlarmBtn = document.querySelector("h1");
 
 for (let i = 12; i >= 0; i--) {
     i = i < 10 ? "0" + i : i;
@@ -21,4 +23,33 @@ for (let i = 2; i > 0; i--) {
     selectMenu[3].firstElementChild.insertAdjacentHTML("afterend", option)
 }
 
+setInterval(() => {
+    let date = new Date(),
+        h = date.getHours(),
+        m = date.getMinutes(),
+        s = date.getSeconds(),
+        ampm = "AM";
+
+    if(h>=12){
+        h= h - 12;
+        ampm= "PM";
+    }
+
+ h= h == 0 ? h=12 : h;
+ h = h<10 ? "0" + h : h;
+ m = m<10 ? "0" + m : m;
+ s = s<10 ? "0" + s : s;
+
+ currentTime.innerText=`${h}:${m}:${s} ${ampm}`;
+
+
+},1000);
+
+function setAlarm(){
+    let time= `${selectMenu[0].value}:${selectMenu[1].value}:${selectMenu[2].value}`;
+    if(time.includes("Hour") ||time.includes("Minute") || time.includes("Second"))
+    console.log(time)
+
+}
+setAlarmBtn.addEventListener("click",setAlarm);
 
