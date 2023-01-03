@@ -34,6 +34,11 @@ body{
     width:100%;
     justify-content: space-between;
 }
+.wrapper .content.disable{
+    opacity:0.6 ;
+    pointer-events: none;
+
+} 
 .content .column{
     border-radius: 5px;
     padding:0 10px;
@@ -55,5 +60,5 @@ body{
     font-size: 20px;
     padding: 17px 0;
     border-radius: 5px;
-    background: lightblue;
+    background: lightcoral;
 }
