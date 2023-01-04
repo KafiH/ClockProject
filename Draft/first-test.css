@@ -1,79 +1,109 @@
+/* background color */
+body{
+    background-image: url("https://i.pinimg.com/originals/eb/94/e9/eb94e9be4efdac470b23149fee496dfc.jpg");
+}
 /*Button css */
-.navbutton{
+.navbutton {
     position: absolute;
     top: 1px;
-    
-    
+
+
 }
-.buttonstyle{
-    
-   width: 150px;
+
+.buttonstyle {
+
+    width: 150px;
     display: inline;
-    margin-top:20px ;
+    margin-top: 20px;
     font-size: 20px;
     padding: 1px 0;
     border-radius: 5px;
-    background: lightcoral;
+    background: rgb(196, 243, 237);
 }
 
-/*Stopwatch css */
-*{
-    margin:0;
-    padding:0;
+/* div placement */
+#div2 {
+    position: relative;
+    top: 20px;
+}
+
+#div3 {
+    position: relative;
+    top: 50px;
+}
+
+#div4{
+    position: relative;
+    top: 125px;
+}
+
+/*alarm clock css */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-body, .wrapper, .content{
+body,
+.wrapper,
+.content {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: white;
+    
+    
 }
 
-.wrapper{
+.wrapper {
     width: 440px;
     padding: 30px 30px 38px;
     border-radius: 20px;
     flex-direction: column;
 }
-.wrapper h1{
+
+.wrapper h1 {
     font-size: 38px;
     font-weight: 500;
     margin: 30px 0;
 }
-.wrapper .content{  
-   
-    width:100%;
+
+.wrapper .content {
+
+    width: 100%;
     justify-content: space-between;
 }
-.wrapper .content.disable{
-    opacity:0.6 ;
+
+.wrapper .content.disable {
+    opacity: 0.6;
     pointer-events: none;
 
-} 
-.content .column{
-    border-radius: 5px;
-    padding:0 10px;
-    border: 1px solid #999;
-    width:calc(100%/3-5px)
 }
-.column select{
-    outline:none;
+
+.content .column {
+    border-radius: 5px;
+    padding: 0 10px;
+    border: 1px solid #999;
+    width: calc(100%/3-5px)
+}
+
+.column select {
+    outline: none;
     border: none;
     height: 53px;
     width: 100%;
     font-size: 15px;
 }
-.wrapper button{
-    width:100%;
-    outline:none;
+
+.wrapper button {
+    width: 100%;
+    outline: none;
     border: none;
-    margin-top:20px ;
+    margin-top: 20px;
     font-size: 20px;
     padding: 17px 0;
     border-radius: 5px;
-    background: lightcoral;
+    background: rgb(196, 243, 237);
 }
 
 /* Clock css */
@@ -82,11 +112,233 @@ body, .wrapper, .content{
 
 .container {
     font-family: Arial, Helvetica, sans-serif;
-    
+
     font-weight: bold;
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 57px;
+}
+
+/* Stopwatch css */
+
+/* timer and result styling  */
+
+.timerDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto mono', monospace;
+    font-size: 30px;
+    box-shadow: 0 0 20px rgba(0, 139, 253, 0.25);
+    color: red;
+    height: 270px;
+    width: 270px;
+
+    border: 2px solid;
+    border-radius: 50%
+}
+
+.buttons {
+    width: 345px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    color: red;
+    font-weight: bold;
+    justify-content: space-between;
+
+}
+
+.stopwatch {
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 23px;
+    width: 100%;
+    padding-top: 25px
+}
+
+.gold {
+    font-weight: 900;
+
+    color: #f2c94c;
+    text-shadow: 0 0 0px #fff, 0 0 50px #f2c94c
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 270px;
+    width: 270px;
+
+
+    border-radius: 50%;
+}
+
+.time {
+    font-family: "Roboto Mono";
+    position: relative;
+
+
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #333;
+    overflow: hidden;
+}
+
+.displayTimer {
+    font-size: 30px;
+    box-shadow: 0 0 20px rgba(0, 139, 253, 0.25);
+    color: red;
+    position: fixed;
+    top: 37%;
+    right: 47.5%;
+}
+
+#Pause {
+
+    background-color: #13aa52;
+    border: 1px solid #13aa52;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+}
+
+#Start {
+    background-color: #000000;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+}
+
+#Reset {
+    background-color: #6d0393;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+}
+
+#Done {
+    background-color: #fb0b0b;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 10px 20px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+
+}
+
+/* world clock css */
+
+#location {
+    box-shadow: 0 0 20px rgba(0, 139, 253, 0.25);
+    overflow: hidden;
+
+}
+
+/* CSS */
+.button-5 {
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji", NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji", EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 8px 18px;
+
+    touch-action: manipulation;
+    width: fit-content;
+
+    border: 0;
+}
+
+button:hover {
+    background-color: rgb(52, 230, 206);
+    box-shadow: 20px 5px 70px  rgb(0, 255, 221);
+
+}
+
+label {
+    color: #B4886B;
+    font-weight: bold;
+
+    width: 150px;
+    font-size: 22px;
+
+}
+
+#time {
+    font-size: 30px;
+    box-shadow: 0 0 20px rgba(255, 4, 201, 0.25);
+    color: rgb(128, 4, 4);
+    top: 55px;
+}
+
+.MoveIt {
+    border: 2px solid;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    margin-top: 25%;
+    display: block;
+    margin: 10px
+}
+
+img {
+    width: 90px;
+    height: 80px;
+    display: block;
+
+    margin: 10px;
+
 }

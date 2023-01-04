@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!--<h2> Clock App</h2> -->
+    <!-- Clock -->
 
     <div id="div1" style="display:none ;">
         <div class="container">
@@ -22,6 +22,7 @@
             <span id="session">AM</span>
         </div>
     </div>
+    <!-- Alarm Clock -->
     <div id="div2" style="display:none ;">
         <div class="wrapper">
             <h1>00:00:00 PM</h1>
@@ -55,13 +56,58 @@
             <button id="alarmbutton">Set Alarm</button>
         </div>
     </div>
+    <!-- Stopwatch -->
     <div id="div3" style="display:none ;">
+        <div class="stopwatch">
+            <h1 class><span class="gold">GOLD</span> STOPWATCH</h1>
+
+            <div class="circle">
+                <span class="time">
+                    <div class="timerDisplay">00:00:00 </div>
+                </span>
+
+            </div>
+
+            <span>
+                <div class="buttons">
+            </span>
+
+            <button id="Pause">Pause</button>
+            <button id="Start">Start</button>
+            <button id="Reset">Reset</button>
+            <button id="Done">Done</button>
+        </div>
+    </div>
+    </div>
+    </section>
+    <div class="result">
+        <div class="displayTimer"></div>
+        <div class="timerResults"></div>
+    </div>
+    <div id="div4" style="display:none ;">
+        <div class="MoveIt">
+
+
+            <!-- code for the input field where the user can enter a location -->
+            <label for="location">Enter a City</label>
+            <input type="text" id="location" name="location">
+
+            <!-- code for the button that the user can click to get the time and date for the entered location -->
+            <button class="button-5" role="button" onclick="getTime()">Get Time and Date</button>
+
+            <!-- code for the div element where the time and date for the entered location will be displayed -->
+            <div id="time">
+
+
+            </div>
+        </div>
+        <!-- include the JavaScript file that contains the getTime() function -->
     </div>
     <div class="navbutton">
-        <button class="buttonstyle" onclick="toggle()">Clock</button>
-        <button class="buttonstyle" onclick="roggle()">Alarm Clock</button>
-        <button class="buttonstyle" onclick="roggle()">Stopwatch</button>
-        <button class="buttonstyle" onclick="roggle()">World Clock</button>
+        <button class="buttonstyle" onclick="clock()">Clock</button>
+        <button class="buttonstyle" onclick="alarmclock()">Alarm Clock</button>
+        <button class="buttonstyle" onclick="stopwatch()">Stopwatch</button>
+        <button class="buttonstyle" onclick="worldclock()">World Clock</button>
     </div>
 
     <script src="first-test.js"></script>
