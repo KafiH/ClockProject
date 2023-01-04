@@ -38,7 +38,7 @@
             }
 
             if (hrs >= 12) {
-                
+                hrs = hrs - 12;
                 Selection.InnerHTML = 'PM';
             } else {
                 Selection.InnerHTML = 'AM';
