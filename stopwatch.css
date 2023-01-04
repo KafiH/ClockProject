@@ -52,27 +52,142 @@ ul li:hover {
     color: orange;
 
 }
-
+/* timer and result styling  */
 
 .timerDisplay{
-    position: relative;
-    width: 92%;
-    background: gray;
-    left: 4%;
-    padding: 40px 0;
-    font-family: 'Roboto mono',monospace;
-    font-size: 40px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    border-radius: 5px;
+    font-family: 'Roboto mono',monospace;
+    font-size: 30px;
     box-shadow: 0 0 20px rgba(0,139,253,0.25);
     color: red;
+    height: 270px;
+    width: 270px;
+  
+    border: 2px solid;
+    border-radius: 50%
 }
-.buttons{
+.buttons{ 
 
     font-family: Arial, Helvetica, sans-serif;
     color: red;
     font-weight: bold;
-    justify-content: space-between;
+    justify-content: space-between
+}
+
+.stopwatch {
+    display: grid;
+    justify-items: center;
+    grid-row-gap: 23px;
+    width: 100%;
+    padding-top: 25px
+  }
+
+  .gold {
+    font-weight: 900;
+  
+    color: #f2c94c;
+    text-shadow: 0 0 0px #fff, 0 0 50px #f2c94c
+  }
+
+  .circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    height: 270px;
+    width: 270px;
+  
+    border: 2px solid;
+    border-radius: 50%;
+  }
+
+  .time {
+    font-family: "Roboto Mono",
+}
+
+.clock {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 10px solid #333;
+    overflow: hidden;
+  }
+  
+  .displayTimer{
+    font-size: 30px;
+    box-shadow: 0 0 20px rgba(0,139,253,0.25);
+    color: red;
+  }
+
+  #Pause{
+
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+}
+
+#Start {
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+}
+
+#Reset{
+  background-color: #6d0393;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+}
+
+#Done{
+  background-color: #fb0b0b;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+
 }

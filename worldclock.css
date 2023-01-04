@@ -1,0 +1,17 @@
+body {
+    background: black;
+}
+
+.clock {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fe2717;
+    font-size: 60px;
+    font-family: OCR A Std, monospace;
+    letter-spacing: 14px;
+
+
+
+}
