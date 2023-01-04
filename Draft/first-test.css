@@ -132,7 +132,7 @@ body,
     font-family: 'Roboto mono', monospace;
     font-size: 30px;
     box-shadow: 0 0 20px rgba(0, 139, 253, 0.25);
-    color: red;
+    color: rgb(0, 159, 138);
     height: 270px;
     width: 270px;
 
@@ -196,7 +196,7 @@ body,
 .displayTimer {
     font-size: 30px;
     box-shadow: 0 0 20px rgba(0, 139, 253, 0.25);
-    color: red;
+    color: rgb(0, 159, 138);
     position: fixed;
     top: 37%;
     right: 47.5%;
@@ -301,6 +301,7 @@ body,
 
     border: 0;
 }
+
 
 button:hover {
     background-color: rgb(52, 230, 206);
