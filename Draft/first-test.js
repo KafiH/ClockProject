@@ -1,3 +1,57 @@
+// button hide and show js
+        function toggle() {
+            var x = document.getElementById("div1");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+        function roggle() {
+            var x = document.getElementById("div2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+
+//clock js
+        function displayTime() {
+            var dateTime = new Date();
+            var hrs = dateTime.getHours();
+            var min = dateTime.getMinutes();
+            var sec = dateTime.getSeconds();
+            var session = document.getElementById('session');
+
+            if (hrs < 10) {
+                hrs = "0" + hrs
+            }
+            if (min < 10) {
+                min = "0" + min
+            }
+
+            if (sec < 10) {
+                sec = "0" + sec
+            }
+
+            if (hrs >= 12) {
+                
+                Selection.InnerHTML = 'PM';
+            } else {
+                Selection.InnerHTML = 'AM';
+            }
+
+            document.getElementById('hours').innerHTML = hrs;
+            document.getElementById('minutes').innerHTML = min;
+            document.getElementById('seconds').innerHTML = sec;
+        }
+        setInterval(displayTime, 10);
+
+// alarm clock js
+
 const currentTime = document.querySelector("h1"),
 content = document.querySelector(".content"),
 selectMenu = document.querySelectorAll("select"),
@@ -49,7 +103,7 @@ setInterval(() => {
  if (alarmTime == `${h}:${m}:${s} ${ampm}`){
     alarm.play();
     alarm.loop  = true ;
-    //console.log("Alarm ringing...");
+    // console.log("Alarm ringing...");
 }
 },1000);
 
@@ -77,4 +131,5 @@ function setAlarm(){
 
 }
 setAlarmBtn.addEventListener("click",setAlarm);
+
 
